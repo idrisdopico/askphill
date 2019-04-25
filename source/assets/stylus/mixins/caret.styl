@@ -1,0 +1,10 @@
+/* mixins/has-ellipse.styl */
+caret()
+    &::before {
+        content: '';
+        height: 0px;
+        width: 0px;
+        border-top: 4px solid;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+    }

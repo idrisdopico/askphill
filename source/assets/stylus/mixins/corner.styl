@@ -1,0 +1,72 @@
+corner($color) {
+     position: relative;
+
+     .has-corner {
+         margin-bottom: 32px;
+     }
+
+     .has-corner:before {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         box-sizing: border-box;
+         border-style: solid;
+         border-width: 32px 32px 0 0;
+         border-color: $color transparent transparent transparent;
+     }
+
+     .has-corner:after {
+         content: '';
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 32px;
+         z-index: -1;
+         background: $color;
+         box-sizing: border-box;
+     }
+
+    @media screen and (max-width: $bp-mobile) {
+        .has-corner:before {
+            display: none;
+        }
+    }
+ }
+
+ corner-small($color) {
+     position: relative;
+
+     .has-corner {
+         margin-bottom: 16px;
+     }
+
+     .has-corner:before {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         box-sizing: border-box;
+         border-style: solid;
+         border-width: 16px 16px 0 0;
+         border-color: $color transparent transparent transparent;
+     }
+
+     .has-corner:after {
+         content: '';
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 16px;
+         z-index: -1;
+         background: $color;
+         box-sizing: border-box;
+     }
+
+     @media screen and (max-width: $bp-mobile) {
+        .has-corner {
+            margin-bottom: 8px;
+        }
+    }
+ }
+

@@ -1,0 +1,16 @@
+aspectRatio(width, height, basic = false)
+    value = (height / width) * 100
+    &:after {
+        content: ''
+        display: block
+        padding-bottom: unit(value, '%')
+    }
+
+    if !basic
+        > * {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }

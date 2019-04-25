@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "devDependencies": {
+    "es6-promise": "^4.1.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-vue": "^2.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "system-bell-webpack-plugin": "^1.0.0"
+  },
+  "scripts": {
+    "watch:js": "webpack-dev-server --content-base public/ --inline",
+    "watch": "npm run watch:js",
+    "build:js": "NODE_ENV=production webpack --bail",
+    "build:bust": "hashmark -l 8 -c public/build -m rev-manifest.json {css,js}/*.{js,css} '{dir}/{name}-{hash}{ext}'",
+    "build:clean": "rm -f public/build/rev-manifest.json && rm -Rf public/build/js/* && rm -Rf public/build/css/*",
+    "build": "npm run build:clean && npm run build:js && npm run build:bust",
+    "build:local": "npm run build:clean && webpack --bail && npm run build:bust"
+  },
+  "napa": {},
+  "dependencies": {
+    "autoprefixer-stylus": "^0.13.0",
+    "axios": "^0.16.1",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-spread": "^6.8.0",
+    "babel-plugin-transform-remove-console": "^6.8.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "core-js": "^2.2.2",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.11.1",
+    "gsap": "1.20.0",
+    "hashmark": "^4.1.0",
+    "iframe-resizer": "^3.5.5",
+    "imports-loader": "^0.7.1",
+    "intersection-observer": "^0.5.0",
+    "normalize.css": "^6.0.0",
+    "style-loader": "^0.16.1",
+    "stylus": "^0.54.2",
+    "stylus-loader": "^3.0.1",
+    "tiny-emitter": "^1.0.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.11.1",
+    "xhr": "^2.2.0"
+  }
+}

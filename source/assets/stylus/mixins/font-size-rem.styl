@@ -1,0 +1,21 @@
+/* mixins/font-size-rem.styl */
+
+/*
+@font-size-rem
+
+Adds font-size in rem from a px value
+
+$value - value in pixels
+
+example:
+    font-size-rem(24px);
+
+    Results in:
+    font-size: 24px;
+    font-size: 1.5rem;
+*/
+
+font-size-rem(value) {
+    font-size: unit(value, 'px'); /* add PX (or original value) as backup */
+    font-size: rem(value);
+}

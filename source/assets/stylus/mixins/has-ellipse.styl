@@ -1,0 +1,16 @@
+/* mixins/has-ellipse.styl */
+has-ellipse()
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        width: 532px;
+        height: 532px;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 266px / 266px 156px 156px 266px;
+        position: absolute;
+        right: -25px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }

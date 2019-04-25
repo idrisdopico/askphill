@@ -1,0 +1,7 @@
+retina($path, $extension = '.jpg') {
+    background-image: url($path + $extension);
+
+    +hidpi(2.0) {
+        background-image:url($path + '@2x' + $extension);
+    }
+}

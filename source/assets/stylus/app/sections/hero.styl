@@ -1,0 +1,46 @@
+.hero {
+    order: 2;
+    max-width: 50vw;
+    height: 40vh;
+    background: url('/public/images/hero/basket.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+
+    &__video {
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 600px;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 50px;
+        left: 40px;
+        padding: 0 100px 0 0;
+    }
+
+    &__title {
+        color: $c-white;
+        margin: 0 0 20px;
+    }
+
+    &__intro {
+        color: $c-white;
+    }
+
+    @media screen and (max-width: $desktop-breakpoint) {
+        order: 1;
+        max-width: 100vw;
+        height: 45vh;
+
+        &__text {
+            padding: 0 40px 0 0;
+        }
+    }
+}

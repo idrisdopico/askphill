@@ -1,0 +1,7 @@
+responsiveWidth(element, parent, rounded=false)
+	value = (element * 100) / parent
+	
+	if rounded
+		width: unit(round(value), '%')
+	else
+		width: unit(value, '%')

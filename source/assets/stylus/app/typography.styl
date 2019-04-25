@@ -1,0 +1,88 @@
+font-face('Gotham-Bold', 'Gotham-Bold', 400, normal, '/public/fonts/Gotham-Bold/');
+font-face('Gotham-Book', 'Gotham-Book', 400, normal, '/public/fonts/Gotham-Book/');
+font-face('Bookerly-Italic', 'Bookerly-Italic', 400, normal, '/public/fonts/Bookerly-Italic/');
+
+$GothamBold = "Gotham-Bold", Arial, sans-serif;
+$GothamBook = "Gotham-Book", Arial, sans-serif;
+$BookerlyItalic = "Bookerly-Italic", Arial, sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $GothamBold;
+    font-weight: normal;
+}
+
+bold {
+    font-weight: bold;
+}
+
+.t-title {
+    font-size-rem(34px);
+    font-size: 3vw;
+    line-height: 1;
+    font-family: $GothamBook;
+}
+
+.t-explained-header {
+    font-size-rem(34px);
+    font-size: 2vw;
+    line-height: 1.4;
+    font-family: $GothamBook;
+}
+
+.t-explained {
+    font-size-rem(12px);
+    font-size: 1vw;
+    line-height: 1.5;
+    font-family: $GothamBook;
+}
+
+.t-explained-title {
+    font-size-rem(12px);
+    font-size: 1vw;
+    line-height: 1.5;
+    font-family: $GothamBold;
+    text-transform: uppercase;
+}
+
+.t-body {
+    font-size-rem(12px);
+    font-size: 1vw;
+    line-height: 1.5;
+    font-family: $GothamBook;
+}
+
+@media screen and (max-width: $desktop-breakpoint) {
+    .t-title {
+        font-size: 4vw;
+    }
+
+    .t-body {
+        font-size: 2.5vw;
+    }
+
+    .t-intro {
+        font-size: 2vw;
+    }
+
+    .t-explained-header {
+        font-size: 4vw;
+    }
+
+    .t-explained {
+        font-size: 2.4vw;
+    }
+
+    .t-explained-title {
+        font-size: 2.4vw;
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+    .t-title {
+        font-size: 5vw;
+    }
+
+    .t-body {
+        font-size: 3vw;
+    }
+}

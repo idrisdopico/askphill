@@ -1,0 +1,30 @@
+<% max_slides = 5 %>
+
+<section class="section section--slider slider" id="slider">
+    <ul class="slider__list">
+        <% for slide in 1..max_slides do %>
+            <li class="slider__slide slider__list__slide slider__list__slide--<%= slide %>"></li>
+        <% end %>
+    </ul>
+    <div class="slider__controls">
+        <div class="slider__controls__left slider-navigation" data-direction="1">
+            <svg viewBox="0 0 14 37">
+                <use xlink:href="#slider-arrow"></use>
+            </svg>
+        </div>
+        <div class="slider__controls__right slider-navigation" data-direction="-1">
+            <svg viewBox="0 0 14 37">
+                <use xlink:href="#slider-arrow"></use>
+            </svg>
+        </div>
+    </div>
+    <div class="t-slider slider__pagi">
+        <span class="slider__pagi__current">1</span>
+        <span class="slider__pagi__total">/ <%= max_slides %></span>
+    </div>
+    <div class="slider__mob__pagi">
+        <% for slide in 1..max_slides do %>
+            <span class="<% if slide === 1 %>active<% end %>" data-number="<%= slide %>"></span>
+        <% end %>
+    </div>
+</section>

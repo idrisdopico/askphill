@@ -1,0 +1,12 @@
+<ul class="color-picker__list">
+    <li class="color-picker__list-item color-picker__list-item--black <%= 'active' if locals[:active] == 'black' %>" data-color="black">
+        <svg class="color-picker__list-item-check" viewBox="0 0 269 269">
+            <use xlink:href="#check"></use>
+        </svg>
+    </li>
+    <li class="color-picker__list-item color-picker__list-item--grey <%= 'active' if locals[:active] == 'grey' %>" data-color="grey">
+        <svg class="color-picker__list-item-check" viewBox="0 0 269 269">
+            <use xlink:href="#check"></use>
+        </svg>
+    </li>
+</ul>

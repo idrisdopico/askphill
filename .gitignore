@@ -1,0 +1,27 @@
+/vendor
+/node_modules
+.env
+.idea
+.idea/
+.idea/*.*
+npm-debug.log
+
+.DS_Store
+
+resources/assets/vendor
+source/public/css
+source/public/js
+# source/public/videos
+
+public/build
+
+# Ignore bundler config
+/.bundle
+.ruby-version
+
+# Ignore the build directory
+/build
+
+# Ignore cache
+/.sass-cache
+/.cache

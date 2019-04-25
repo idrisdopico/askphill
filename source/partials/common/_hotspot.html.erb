@@ -1,0 +1,26 @@
+<div class="<%= locals[:blockClass] %> hotspot hotspot--<%= locals[:color] %>">
+    <div class="hotspot__ellipse"></div>
+    <% if locals[:horiz] %>
+        <div class="hotspot__line hotspot__line--horiz "></div>
+    <% end %>
+    <% if locals[:vert] %>
+        <div class="hotspot__line hotspot__line--vert "></div>
+    <% end %>
+
+    <div class="hotspot__text">
+        <h6 class="t-hotspot-title hotspot__title"><%= locals[:title] %></h6>
+        <p class="t-hotspot-desc hotspot__description"><%= locals[:text] %></p>
+    </div>
+</div>
+
+
+
+<!--.hotspot {-->
+<!--    .hotspot__text {-->
+<!--        display: none;-->
+<!--    }-->
+
+<!--    &.rondo .hotspot__text--rondo {-->
+<!--        display: block;-->
+<!--    }-->
+<!--}-->

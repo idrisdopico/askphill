@@ -1,0 +1,13 @@
+killAfter()
+	&:after
+		content: none
+
+
+
+killRatio(content=false)
+	if content
+		&:before
+			content: none
+	else
+		&:after
+			content: none

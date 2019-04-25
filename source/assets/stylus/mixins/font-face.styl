@@ -1,0 +1,28 @@
+/* mixins/font-face */
+/*
+@font-face
+
+Mixin to declare font-face for webfonts with bulletproof declaration and style/weight.<br/>
+<code>font-face('Bose Gothic', 'bose_gothic_2014_reg-webfont', 400, normal, '/fonts/');</code>
+
+$family - The name that will be used for the font-family property
+$font-name - Filename of the font without extension
+$weight - Weight used for font-weight property, defaults to 'normal'
+$style  - Style used for font-style property, defaults to 'normal'
+$path - Path to load the font, defaults to ''
+
+Styleguide Mixins.font-face
+*/
+font-face(family, font-name, weight = normal, style = normal, path = '') {
+    $fullpath = path + font-name;
+    @font-face {
+        font-family: family;
+        src: url($fullpath + '.eot');
+        src: url($fullpath + '.eot?#iefix') format('embedded-opentype'),
+             url($fullpath +  '.woff') format('woff'),
+             url($fullpath + '.ttf') format('truetype'),
+             url($fullpath + '.svg#' + font-name) format('svg');
+        font-weight: weight;
+        font-style style;
+    }
+}

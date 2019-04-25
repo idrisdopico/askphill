@@ -1,0 +1,16 @@
+/* mixins/line-height.styl */
+line-height-em(_size)
+    if unit(_size) == 'px'
+        line-height: unit((unit(_size, '') / unit($body-line-height, '')), 'em')
+    else
+        line-height:  unit(_size, 'em')
+
+line-height-percent(_leading, _fontSize = @font-size)
+    if unit(_leading) == 'px'
+        if unit(_fontSize) == 'em'
+            _fontSize = unit($body-font-size, '') * unit(_fontSize, '')
+            line-height: unit((unit(_leading, '') / unit(_fontSize, '')), '')
+        else
+            line-height: unit((unit(_leading, '') / unit(_fontSize, '')), '')
+    else
+        line-height:  unit(_leading, 'em')

@@ -1,0 +1,30 @@
+equal-height($color, gradient = false) {
+    if gradient {
+        &:after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            background-color: $color;
+            background-image: -moz-linear-gradient(-45deg, $color-dark-turquoise-rgba 0%, rgba(255,255,255,0) 65%);
+            background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$color-dark-turquoise-rgba), color-stop(65%,rgba(255,255,255,0)));
+            background-image: -webkit-linear-gradient(-45deg, $color-dark-turquoise-rgba 0%,rgba(255,255,255,0) 65%);
+            background-image: -o-linear-gradient(-45deg, $color-dark-turquoise-rgba 0%,rgba(255,255,255,0) 65%);
+            background-image: -ms-linear-gradient(-45deg, $color-dark-turquoise-rgba 0%,rgba(255,255,255,0) 65%);
+            background-image: linear-gradient(135deg, $color-dark-turquoise-rgba 0%,rgba(255,255,255,0) 65%);
+            filter:  unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr={$color-dark-turquoise}), endColorstr='#00ffffff',GradientType=1 )");
+        }
+    } else {
+        &:after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            background: $color;
+        }
+    }
+}

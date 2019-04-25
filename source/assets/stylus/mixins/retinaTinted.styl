@@ -1,0 +1,9 @@
+retinaTinted($path, $extension = '.jpg') {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url($path + $extension);
+    background-repeat: no-repeat;
+
+    +hidpi(2.0, selector()) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url($path + '@2x' + $extension);
+        background-repeat: no-repeat;
+    }
+}

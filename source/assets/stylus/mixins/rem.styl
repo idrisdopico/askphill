@@ -1,0 +1,19 @@
+/* mixins/rem */
+
+/*
+@rem
+
+Mixin to transform px into rem
+
+$value - value in pixels
+
+example:
+    line-height: rem(16px);
+
+    Results in:
+    line-height: 1rem;
+*/
+
+rem(value) {
+    return unit(value/16, 'rem');
+}

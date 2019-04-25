@@ -1,0 +1,10 @@
+/* mixins/asset */
+asset(resource, baseDir = '') {
+    if ($baseURL is defined) {
+		url = $baseURL + baseDir + resource;
+
+    } else {
+        url = baseDir + resource;
+    }
+    return url;
+}
